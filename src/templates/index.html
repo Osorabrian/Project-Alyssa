@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alyssa | Jessup CS Support</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="hero">
+        <p class="eyebrow">Jessup University</p>
+        <h1>Alyssa Student Support</h1>
+        <p class="subtitle">Computer Science admissions, courses, fees, exams, and campus help in one place.</p>
+      </header>
+
+      <section id="chat" class="chat-panel" aria-live="polite"></section>
+
+      <section class="quick-prompts" aria-label="Quick prompts">
+        <button class="chip" data-q="What are the admission requirements for transfer students?">Transfer admissions</button>
+        <button class="chip" data-q="How much are tuition and CS fees for one academic year?">Tuition and fees</button>
+        <button class="chip" data-q="What courses are required before taking Algorithms I?">Course prerequisites</button>
+        <button class="chip" data-q="How do deferred final exams work?">Deferred exams</button>
+      </section>
+
+      <form id="composer" class="composer" autocomplete="off">
+        <textarea id="question" rows="2" placeholder="Ask Alyssa about Jessup CS..." required></textarea>
+        <button id="send" type="submit">Send</button>
+      </form>
+    </main>
+
+    <template id="msg-template">
+      <article class="msg">
+        <p class="role"></p>
+        <div class="bubble"></div>
+      </article>
+    </template>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
